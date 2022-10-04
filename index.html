@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    1. Create a masterhead - add a background image and put a text at the center,
+with a button below it.
+
+<pre>
+CSS:-
+.card {
+text-align: center;
+height: 300px;
+background-image:
+url("https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/masteh
+ead(web).svg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+.btn{
+margin: 20px auto;
+width: 200px;
+background-color: bisque;
+height: 25px;
+border-radius: 13px;
+cursor:pointer;
+}
+
+OUTPUT:-
+</pre>
+<div class="card">
+    <h1>Hi! I am John</h1>
+    <input type="button" value="Submit" class="btn" />
+    </div>
+
+    <br><br><br>
+    2. Create header -- left side will have a logo and right side will have 4 buttons.
+    
+<pre>
+    CSS:-
+    @import
+    url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Seri
+    f:wght@100&display=swap');
+    img {
+    margin-top: 15px;
+    }
+    .navbar {
+    float: right;
+    margin-right: 70px;
+    display: flex;
+    }
+    .nav-button {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    OUTPUT:-
+    
+</pre>
+    <div>
+        <div class="navbar">
+        <div class="nav-button">Study Material</div>
+        <div class="nav-button">Courses</div>
+        <div class="nav-button">Practice Coding</div>
+        <div class="nav-button">Elevation Academy</div>
+        </div>
+        <div class="logo"><img
+        src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/navbar/logoPrepBytes.svg" height="40px" alt=""></div>
+        </div>
+
+        <br><br><br>
+
+        3. Create 3 cards of height & width 200 px with texts in it, the card should be
+        horizontally placed in web view and vertically in mobile view.<br>
+        Code:-
+       <pre>
+        .container
+        {
+        display: flex;
+        justify-content: space-evenly;
+        }
+        .card
+        {
+        border: 2px groove gray;
+        width: 200px;
+        height: 200px;
+        }
+        @media screen and (max-width:720px) {
+        .container{
+        flex-direction: column
+        }
+        }
+
+        OUTPUT:-
+    </pre>
+        <div class="container">
+            <div class="card">box</div>
+            <div class="card">box</div>
+            <div class="card">box</div>
+            </div>
+
+    4. Replicate the button on Masthead of PrepBytes, Change the background color of button for mobile view and ipad
+<pre>
+    .login {
+        background-color: rgb(135, 135, 245);
+        height: 50px;
+        width: 150px;
+        border-radius: 35px;
+        margin:12px;
+        font-size: larger;
+        color: cornsilk;
+        }
+
+        .butt {
+        display: flex;
+        justify-content: center;
+        }
+
+        @media only screen and (max-width: 800px) and (min-width: 480px) {
+        .butt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .login {
+        background-color: green;
+        height: 50px;
+        width: 150px;
+        border-radius: 35px;
+        margin:12px;
+        font-size: larger;
+        color: cornsilk;
+        }
+        }
+        @media only screen and (max-width: 480px) and (min-width: 320px) {
+        .butt{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        }
+        .login {
+        background-color: red;
+        height: 50px;
+        width: 150px;
+        border-radius: 35px;
+        margin:12px;
+        font-size: larger;
+        color: cornsilk;
+        }
+        }
+
+        OUTPUT:-
+
+    </pre>
+        <div class="butt">
+        <button class="login">Prepbytes</button>
+    
+        </div>
+        
+        5. Write code to show implementation of flex<br><br>
+
+        Here a navbar with 4 buttons has been created, using flex we can add the flex
+property to them and adjust and align the items inside them.
+<pre>
+Code:-
+
+.container1 {
+height: 544px;
+width: 100%;
+border: 2px solid black;
+display: flex;
+
+}
+.item {
+width: 200px;
+height: 200px;
+background-color: tomato;
+border: 2px solid green;
+margin: 10px;
+padding: 3px;
+}
+#item-1 {
+}
+#item-2 {
+
+flex-basis: 160px;
+
+}
+#item-3 {
+
+align-self: flex-start;
+align-self: flex-end;
+align-self: center;
+}
+
+OUTPUT:-
+</pre>
+<h1>This is Flexbox Tutorial</h1>
+<div class="container1">
+<div class="item" id="item-1">First Box</div>
+<div class="item" id="item-2">Second Box</div>
+<div class="item" id="item-3">Third Box</div>
+</div>
+
+</body>
+</html>
